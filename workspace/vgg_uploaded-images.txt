@@ -1,0 +1,76 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:          Charolais_Bull_01.jpg  label:             charolais bull
+ 2 key:              Coffee_Can_01.jpg  label:                 coffee can
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:                     Dog_01.jpg  label:                        dog
+
+     MATCH:
+
+ NOT A MATCH:
+
+         Charolais_Bull_01.jpg: 
+Real:             charolais bull   Classifier:                             ox
+
+             Coffee_Can_01.jpg: 
+Real:                 coffee can   Classifier:                    pill bottle
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               mexican hairless
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               mexican hairless
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+{'Charolais_Bull_01.jpg': ['charolais bull', 'ox', False, False, False], 'Coffee_Can_01.jpg': ['coffee can', 'pill bottle', False, False, False], 'Dog_02.jpg': ['dog', 'mexican hairless', False, True, True], 'Dog_01.jpg': ['dog', 'mexican hairless', False, True, True]}
+
+     MATCH:
+
+ NOT A MATCH:
+
+         Charolais_Bull_01.jpg: 
+Real:             charolais bull   Classifier:                             ox  
+PetLabelDog: 0  ClassLabelDog: 0
+
+             Coffee_Can_01.jpg: 
+Real:                 coffee can   Classifier:                    pill bottle  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               mexican hairless  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               mexican hairless  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Model used: vgg
+n_images - number of images: 4
+n_dogs_img - number of dog images: 2
+n_notdogs_img - number of NON-dog images: 2
+n_match - number of matches between pet & classifier labels: 0
+n_correct_dogs - number of correctly classified dog images: 2
+n_correct_notdogs - number of correctly classified NON-dog images: 2
+n_correct_breed - number of correctly classified dog breeds: 0
+        pct_match - percentage of correct matches: 0.0
+pct_correct_dogs - percentage of correctly classified dogs: 100.0
+pct_correct_breed - percentage of correctly classified dog breeds: 0.0
+pct_correct_notdogs - percentage of correctly classified NON-dogs: 100.0
+Incorrectly classified breed in image: Dog_02.jpg
+Incorrectly classified breed in image: Dog_01.jpg
+
+** Total Elapsed Runtime: 0:0:3

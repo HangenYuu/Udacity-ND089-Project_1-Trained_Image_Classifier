@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Pham Nguyen Hung
 # DATE CREATED: 28-JUL-2022                                 
-# REVISED DATE: 01-AUG-2022
+# REVISED DATE: 02-AUG-2022
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
 #          should also allow the user to be able to print out cases of misclassified
@@ -63,24 +63,24 @@ def print_results(results_dic, results_stats_dic, model,
            None - simply printing results.
     """
 #    print(results_stats_dic)
-    print(f'Model used: {model}')
-    print(f'''n_images - number of images: {results_stats_dic['n_images']}''')
-    print(f'''n_dogs_img - number of dog images: {results_stats_dic['n_dogs_img']}''')
-    print(f'''n_notdogs_img - number of NON-dog images: {results_stats_dic['n_notdogs_img']}''')
-    print(f'''n_match - number of matches between pet & classifier labels: {results_stats_dic['n_match']}''')
-    print(f'''n_correct_dogs - number of correctly classified dog images: {results_stats_dic['n_correct_dogs']}''')
-    print(f'''n_correct_notdogs - number of correctly classified NON-dog images: {results_stats_dic['n_correct_notdogs']}''')
-    print(f'''n_correct_breed - number of correctly classified dog breeds: {results_stats_dic['n_correct_breed']}''')
-    print(f'''pct_match - percentage of correct matches: {results_stats_dic['pct_match']}''')
-    print(f'''pct_correct_dogs - percentage of correctly classified dogs: {results_stats_dic['pct_correct_dogs']}''')
-    print(f'''pct_correct_breed - percentage of correctly classified dog breeds: {results_stats_dic['pct_correct_breed']}''')
-    print(f'''pct_correct_notdogs - percentage of correctly classified NON-dogs: {results_stats_dic['pct_correct_notdogs']}''')
+    print(f'''#  Model used: {model}
+#  n_images - number of images: {results_stats_dic['n_images']}
+#  n_dogs_img - number of dog images: {results_stats_dic['n_dogs_img']}
+#  n_notdogs_img - number of NON-dog images: {results_stats_dic['n_notdogs_img']}
+#  n_match - number of matches between pet & classifier labels: {results_stats_dic['n_match']}
+#  n_correct_dogs - number of correctly classified dog images: {results_stats_dic['n_correct_dogs']}
+#  n_correct_notdogs - number of correctly classified NON-dog images: {results_stats_dic['n_correct_notdogs']}
+#  n_correct_breed - number of correctly classified dog breeds: {results_stats_dic['n_correct_breed']}
+#  pct_match - percentage of correct matches: {results_stats_dic['pct_match']}
+#  pct_correct_dogs - percentage of correctly classified dogs: {results_stats_dic['pct_correct_dogs']}
+#  pct_correct_breed - percentage of correctly classified dog breeds: {results_stats_dic['pct_correct_breed']}
+#  pct_correct_notdogs - percentage of correctly classified NON-dogs: {results_stats_dic['pct_correct_notdogs']}''')
     if print_incorrect_dogs:
         for item in results_dic:
             if results_dic[item][3] != results_dic[item][4]:
-                print(f'Incorrectly classified image as dog: {item}')
+                print(f'#  Incorrectly classified image as dog: {item}')
     if print_incorrect_breed:
         for item in results_dic:
             if results_dic[item][3] and not results_dic[item][2]:
-                print(f'Incorrectly classified breed in image: {item}')
+                print(f'#  Incorrectly classified breed in image: {item}')
     return
